@@ -15,7 +15,14 @@ body {
 
 	max-width: 80ch;
 	margin: 0 auto;
-	margin-top: 8rem;
+	padding: 1rem;
+	margin-top: 8vw;
+}
+
+a{
+	font-family: 'Satoshi Medium', sans-serif;
+	color: white;
+	font-weight: 500;
 }
 
 h1,
@@ -31,20 +38,50 @@ h6 {
 p {
 	font-family: 'Satoshi Regular', sans-serif;
 	color: white;
+	line-height: 1.3em;
 	margin-bottom: 1rem;
 }
 
 .description {
 	font-size: 1.25rem;
+	margin-bottom: 2rem;
+	text-align: center;
+	text-wrap: balance;
 }
 
 #title {
 	text-align: center;
 	font-size: 4rem;
+	line-height: 1em;
+	margin-bottom: 2rem;
 }
 
 .logo {
-	max-width: 80vw;
-	// height: 100px;
+	max-width: 200px;
 	margin: 0 auto;
+	margin-bottom: 2rem;
+}
+
+#links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+	margin-bottom: 2rem;
+}
+
+#links a {
+	box-sizing: border-box;
+	background-color: #0a0f04;
+	padding: 0.75rem 1.25rem;
+	border-radius: 999;
+	text-decoration: none;	
+}
+
+#links a:hover {
+	text-decoration: underline;
+}
+
+#back {
+	margin-bottom: 2rem;
 }
