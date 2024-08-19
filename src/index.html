@@ -1,25 +1,37 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<meta name="description" content="Found Around is a platform that allows users to find and share items that have been found in their local area."/>
-	<meta name="author" content="Found Around"/>
-	<link rel="stylesheet" href="main.scss"/>
-    <title>Found Around</title>
-  </head>
-  <body>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description"
+		content="Found Around is a platform that allows users to find and share items that have been found in their local area." />
+	<meta name="author" content="Found Around" />
+	<link rel="stylesheet" href="main.scss" />
+	<title>Found Around</title>
+</head>
+
+<body>
 	<img class="logo" src="./logo.svg" alt="Found around logo">
 
-    <h1 id="title">Found Around</h1>
+	<h1 id="title">Found Around</h1>
 	<div class="description">
 		<p>Find and learn about the flora and fauna around Australia with Found Around.</p>
-		<p>Found Around is a game developed by Scott Blissett in woolyungah of the Dharawal people also known as Wollongong, South Coast of NSW Australia.</p>
+		<p>Found Around is a game developed by Scott Blissett in woolyungah of the Dharawal people also known as
+			Wollongong, South Coast of NSW Australia.</p>
 	</div>
+	<form name="closed-testing" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+		<input type="hidden" name="form-name" value="closed-testing">
+		<input type="hidden" name="redirect" value="/thank-you.html">
+		<label>Enter your email to join the Closed Testing group:</label>
+		<input type="email" name="personal-email" id="personal-email" required>
+		<button type="submit">Submit</button>
+	</form>
 	<div id="links">
 		<a href="mailto:hello@foundaround.app">hello@foundaround.app</a>
 		<a href="./privacy.html">Privacy and Data Policy</a>
 	</div>
-	
-  </body>
+
+</body>
+
 </html>
