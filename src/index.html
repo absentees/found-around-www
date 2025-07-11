@@ -12,24 +12,42 @@
 </head>
 
 <body>
-	<img class="logo" src="./logo.svg" alt="Found around logo">
+	<a href="#main-content" class="skip-link">Skip to main content</a>
 
-	<h1 id="title">Found Around</h1>
-	<div class="description">
-		<p>Find and learn about the flora and fauna around Australia with Found Around.</p>
-		<p>Found Around is a game developed by Scott Blissett in woolyungah of the Dharawal people also known as
-			Wollongong, South Coast of NSW Australia.</p>
-	</div>
-	<form name="closed-testing" method="POST" netlify data-netlify-honeypot="bot-field" action="/thank-you.html">
-		<input type="hidden" name="form-name" value="closed-testing">
-		<label>Enter your Google email to join the Closed Testing group (Android only at this stage):</label>
-		<input type="email" name="personal-email" id="personal-email" required>
-		<button type="submit">Submit</button>
-	</form>
-	<div id="links">
-		<a href="mailto:hello@foundaround.app">hello@foundaround.app</a>
-		<a href="./privacy.html">Privacy and Data Policy</a>
-	</div>
+	<header>
+		<img class="logo" src="./logo.svg" alt="Found Around logo - flora and fauna discovery app">
+
+		<h1 id="title">Found Around</h1>
+	</header>
+
+	<main id="main-content">
+		<section class="description">
+			<p>Find and learn about the flora and fauna around Australia with Found Around.</p>
+			<p>Found Around is a game developed by Scott Blissett in woolyungah of the Dharawal people also known as
+				Wollongong, South Coast of NSW Australia.</p>
+		</section>
+
+		<section>
+			<h2 class="visually-hidden">Join Closed Testing</h2>
+			<form name="closed-testing" method="POST" netlify data-netlify-honeypot="bot-field"
+				action="/thank-you.html">
+				<input type="hidden" name="form-name" value="closed-testing">
+				<label for="personal-email">Enter your Google email to join the Closed Testing group (Android only at
+					this stage):</label>
+				<input type="email" name="personal-email" id="personal-email" required aria-describedby="email-help">
+				<div id="email-help" class="visually-hidden">Please enter a valid Google email address to receive access
+					to the closed testing version of the app</div>
+				<button type="submit">Submit</button>
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<nav id="links" aria-label="Contact and legal information">
+			<a href="mailto:hello@foundaround.app">hello@foundaround.app</a>
+			<a href="./privacy.html">Privacy and Data Policy</a>
+		</nav>
+	</footer>
 
 </body>
 
