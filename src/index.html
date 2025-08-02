@@ -4,8 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="description"
-		content="Found Around is a platform that allows users to find and share items that have been found in their local area." />
+	<meta name="description" content="Find and learn about the flora and fauna around Australia with Found Around." />
 	<meta name="author" content="Found Around" />
 	<link rel="stylesheet" href="main.scss" />
 	<title>Found Around</title>
@@ -27,18 +26,58 @@
 				Wollongong, South Coast of NSW Australia.</p>
 		</section>
 
-		<section>
-			<h2 class="visually-hidden">Join Closed Testing</h2>
-			<form name="closed-testing" method="POST" netlify data-netlify-honeypot="bot-field"
-				action="/thank-you.html">
+		<section aria-labelledby="signup-heading">
+			<h2 id="signup-heading" class="visually-hidden">Join Closed Testing</h2>
+			<form name="closed-testing" method="POST" netlify data-netlify-honeypot="bot-field" action="/thank-you.html"
+				novalidate aria-describedby="form-description">
 				<input type="hidden" name="form-name" value="closed-testing">
-				<label for="personal-email">Enter your Google email to join the Closed Testing group (Android only at
-					this stage):</label>
-				<input type="email" name="personal-email" id="personal-email" required aria-describedby="email-help">
-				<div id="email-help" class="visually-hidden">Please enter a valid Google email address to receive access
-					to the closed testing version of the app</div>
-				<button type="submit">Submit</button>
+
+				<!-- Honeypot field for spam protection - hidden from real users -->
+				<div class="visually-hidden" aria-hidden="true">
+					<label for="bot-field">Don't fill this out if you're human:</label>
+					<input name="bot-field" id="bot-field" tabindex="-1" autocomplete="off">
+				</div>
+
+				<fieldset>
+					<legend class="visually-hidden">Closed Testing Registration</legend>
+
+					<div class="form-group">
+						<label for="personal-email">Enter your Google email to join the Closed Testing group (Android
+							only at this stage):</label>
+						<input type="email" name="personal-email" id="personal-email" required
+							aria-describedby="email-help email-error" aria-invalid="false" autocomplete="email"
+							autocorrect="off" spellcheck="false">
+						<div id="email-help" class="help-text">Please enter a valid Google email address to receive
+							access to the closed testing version of the app</div>
+						<div id="email-error" class="error-message" role="alert" aria-live="polite"></div>
+					</div>
+
+					<button type="submit" aria-describedby="submit-help">
+						Submit Application
+						<span class="visually-hidden">(to join Found Around closed testing)</span>
+					</button>
+					<div id="submit-help" class="help-text">You'll receive an email invitation to join the testing
+						program</div>
+				</fieldset>
 			</form>
+		</section>
+		<section class="dev-journal" aria-labelledby="journal-heading">
+			<h2 id="journal-heading">Dev journal</h2>
+			<div class="journal-entries">
+				<article class="journal-entry">
+					<h3 class="entry-date">August 2, 2025</h3>
+					<div class="entry-content">
+						<p>Created this dev journal to keep track of progress. There is lots of development so far that
+							I'm not
+							going to get in to but it's been a slow journey.</p>
+						<p>Next thing on the list should be some kind of onboarding/how-to-use Found Around and maybe
+							this can be replayed as a Help section.</p>
+					</div>
+				</article>
+
+
+				<!-- Add more entries as needed -->
+			</div>
 		</section>
 	</main>
 
@@ -48,6 +87,8 @@
 			<a href="./privacy.html">Privacy and Data Policy</a>
 		</nav>
 	</footer>
+
+	<script src="accessibility.js"></script>
 
 </body>
 

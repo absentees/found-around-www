@@ -1,10 +1,14 @@
 {
   "devDependencies": {
     "@parcel/transformer-sass": "2.12.0",
+    "pa11y": "^9.0.0",
     "parcel": "^2.12.0"
   },
   "scripts": {
     "dev": "parcel src/index.html src/thank-you.html",
-    "build": "parcel build src/index.html src/thank-you.html"
+    "build": "parcel build src/index.html src/thank-you.html",
+    "a11y:pa11y": "pa11y http://localhost:1234",
+    "a11y": "npm run a11y:pa11y",
+    "test:a11y": "echo 'Please run npm run dev in another terminal first, then run npm run a11y'"
   }
 }
