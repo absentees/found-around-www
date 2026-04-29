@@ -351,6 +351,23 @@ input[aria-invalid="true"]:focus {
 		margin-bottom: 2rem;
 		color: $white;
 	}
+
+	.entry-content {
+		ul {
+			list-style: disc;
+			padding-left: 1.5rem;
+			display: flex;
+			flex-direction: column;
+			gap: 0.4rem;
+
+			li {
+				color: $white-transparent-80;
+				font-family: 'Satoshi Regular', sans-serif;
+				font-size: 1rem;
+				line-height: 1.5;
+			}
+		}
+	}
 }
 
 // STEPS
